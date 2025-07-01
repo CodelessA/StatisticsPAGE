@@ -109,4 +109,32 @@ const wyksztalcenieChart = new Chart(wyksztalcenieCtx, {
   }
 });
 
+const dochodCtx = document.getElementById('dochodChart').getContext('2d');
+const dochodChart = new Chart(dochodCtx, {
+  type: 'bar',
+  data: {
+    labels: ['< 2000 zł', '2000-4000 zł', '4000-6000 zł', '> 6000 zł'],
+    datasets: [{
+      label: 'Liczba respondentów',
+      data: [8, 15, 17, 10], // przykładowe dane, bogata rozkładówka :)
+      backgroundColor: ['#ff4c4c', '#ff7f50', '#4cafff', '#4cff88']
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    scales: {
+      x: {
+        ticks: { color: '#eee' },
+        grid: { color: '#444' }
+      },
+      y: {
+        ticks: { color: '#eee' },
+        grid: { color: '#444' }
+      }
+    },
+    plugins: {
+      legend: { display: false }
+    }
+  }
+});
 
