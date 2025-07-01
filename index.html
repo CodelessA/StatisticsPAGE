@@ -10,6 +10,11 @@
     <h1>Wpływ świadomości konsumentów na decyzje zakupowe w branży Automotive</h1>
   </header>
 
+  <div class="infodiv">
+  <p>Wyniki badania zostaną przedstawione na poszczególnych wykresach i z uwzględnieniem wybranych pytań na próbce 50 respondentów. <hr>
+    W stworzeniu i przeprowadzeniu badania wzięli udział: <span class="namesaim">August 56926, Michał 51308, Oliwia 58511</span>
+  </p>
+  </div>
   <main>
 
     <section class="wykres">
@@ -19,35 +24,14 @@
     <p>Zdecydowana większość respondentów była w wieku 18-45 lat, co może rzutować na wyniki badania — są one reprezentatywne głównie dla młodszych i średnich wiekiem konsumentów.</p>
   </div>
 </section>
-
-
-    <section class="wykres">
-      <h2>Typ silnika wybierany przez respondentów</h2>
-      <canvas id="silnikChart"></canvas>
-      <div class="komentarz">
-        <!-- sekcja komentarze -->
-        <p>Twój komentarz: ...</p>
-      </div>
-    </section>
-
-    <!-- sekcje wykresów -->
+    
      <section class="wykres">
       <h2>Płeć</h2>
       <canvas id="gender"></canvas>
       <div class="komentarz">
-        <!-- sekcja komentarze -->
         <p>Wygląda na to, że kobiety chętniej odpowiadały na pytania.</p>
       </div>
     </section>
-
-
-    <section class="wykres">
-  <h2>Technologia przyszłości branży automotive</h2>
-  <canvas id="przyszloscChart"></canvas>
-  <div class="komentarz">
-    <p>Wodorowe?</p>
-  </div>
-</section>
 
 <section class="wykres">
   <h2>Miejsce zamieszkania respondentów</h2>
@@ -74,10 +58,28 @@
 </section>
 
 <section class="wykres">
+      <h2>Typ silnika wybierany przez respondentów</h2>
+      <canvas id="silnikChart"></canvas>
+      <div class="komentarz">
+        <p>Twój komentarz: ...</p>
+      </div>
+    </section>
+
+<section class="wykres">
   <h2>Zależność między dochodem netto a wyborem typu silnika</h2>
   <canvas id="dochodSilnikChart"></canvas>
   <div class="komentarz">
-    <p>Widać wyraźnie, że osoby o wyższych dochodach częściej wybierają droższe technologie, takie jak auta elektryczne czy hybrydowe.</p>
+    <p>Widać wyraźnie, że osoby o wyższych dochodach częściej wybierają droższe technologie, takie jak auta elektryczne czy hybrydowe. 
+      Nie da się też ukryć, że najchętniej wybierane są samochody spalinowe, a przynajmniej wyposażone w taki silnik. 
+    </p>
+  </div>
+</section>
+
+<section class="wykres">
+  <h2>Technologia przyszłości branży automotive</h2>
+  <canvas id="przyszloscChart"></canvas>
+  <div class="komentarz">
+    <p>Wodorowe?</p>
   </div>
 </section>
 
@@ -108,9 +110,8 @@
   </div>
 </section>
 
-
-    
-  </main>
+<footer><p class="footerp">Page made by August A. and ChatGPT 2025</p></footer>
+    </main>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
