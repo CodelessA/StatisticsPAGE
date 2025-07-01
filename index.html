@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StatisticsPage</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Wpływ świadomości konsumentów na decyzje zakupowe w branży Automotive</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Wybór typu silnika</h1>
-  <canvas id="silnikChart"></canvas>
+  <header>
+    <h1>Wpływ świadomości konsumentów na decyzje zakupowe w branży Automotive</h1>
+  </header>
 
-  <script src="script.js" defer></script>
+  <main>
+    <section class="wykres">
+      <h2>Typ silnika wybierany przez respondentów</h2>
+      <canvas id="silnikChart"></canvas>
+      <div class="komentarz">
+        <!-- sekcja komentarze -->
+        <p>Twój komentarz: ...</p>
+      </div>
+    </section>
+
+    <!-- sekcje wykresów -->
+     <section class="wykres">
+      <h2>Płeć</h2>
+      <canvas id="gender"></canvas>
+      <div class="komentarz">
+        <!-- sekcja komentarze -->
+        <p>Wygląda na to, że kobiety chętniej odpowiadały na pytania.</p>
+      </div>
+    </section>
+
+
+    <section class="wykres">
+  <h2>Technologia przyszłości branży automotive</h2>
+  <canvas id="przyszloscChart"></canvas>
+  <div class="komentarz">
+    <p>Wodorowe?</p>
+  </div>
+</section>
+
+<section class="wykres">
+  <h2>Miejsce zamieszkania respondentów</h2>
+  <canvas id="miejsceChart"></canvas>
+  <div class="komentarz">
+    <p>Najwięcej respondentów pochodziło ze średnich miast, co może sugerować rosnącą świadomość konsumencką właśnie w tej grupie.</p>
+  </div>
+</section>
+
+<section class="wykres">
+  <h2>Wykształcenie respondentów</h2>
+  <canvas id="wyksztalcenieChart"></canvas>
+  <div class="komentarz">
+    <p>Respondenci z wykształceniem średnim i wyższym stanowili największą grupę, co może wpływać na bardziej świadome wybory zakupowe.</p>
+  </div>
+</section>
+
+
+
+    
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
