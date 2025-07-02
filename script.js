@@ -221,7 +221,7 @@ const wyksztalcenieTechnologiaChart = new Chart(wyksztalcenieTechnologiaCtx, {
     datasets: [
       {
         label: 'Elektryczne',
-        data: [1, 2, 5, 7], // przykładowe dane — dostosuj wedle rzeczywistości
+        data: [1, 2, 5, 7], 
         backgroundColor: '#4cff88'
       },
       {
@@ -264,7 +264,7 @@ const infoZrodlaChart = new Chart(infoZrodlaCtx, {
     datasets: [
       {
         label: 'Podstawowe',
-        data: [3, 4, 1, 2], // przykładowe liczby wskazań
+        data: [3, 4, 1, 2], 
         backgroundColor: '#ff4c4c'
       },
       {
@@ -310,7 +310,7 @@ const czynnikiChart = new Chart(czynnikiCtx, {
     labels: ['Cena', 'Koszty eksploatacji', 'Ekologia', 'Marka i design', 'Zasięg', 'Wydajność silnika'],
     datasets: [{
       label: 'Liczba wskazań',
-      data: [35, 30, 10, 12, 18, 20], // przykładowe dane, Ty podstaw swoje
+      data: [35, 30, 10, 12, 18, 20], 
       backgroundColor: ['#4cff88', '#4cafff', '#ff4c4c', '#ff7f50', '#ffa64c', '#4c88ff']
     }]
   },
@@ -328,6 +328,49 @@ const czynnikiChart = new Chart(czynnikiCtx, {
     },
     plugins: {
       legend: { display: false }
+    }
+  }
+});
+
+
+const wiekSilnikCtx = document.getElementById('wiekSilnikChart').getContext('2d');
+const wiekSilnikChart = new Chart(wiekSilnikCtx, {
+  type: 'bar',
+  data: {
+    labels: ['18-25', '26-35', '36-45', '46-55'],
+    datasets: [
+      {
+        label: 'Spalinowy',
+        data: [8, 7, 6, 4], 
+        backgroundColor: '#ff4c4c'
+      },
+      {
+        label: 'Hybrydowy',
+        data: [7, 5, 3, 1],
+        backgroundColor: '#4cafff'
+      },
+      {
+        label: 'Elektryczny',
+        data: [5, 3, 1, 0],
+        backgroundColor: '#4cff88'
+      }
+    ]
+  },
+  options: {
+    scales: {
+      x: {
+        ticks: { color: '#eee' },
+        grid: { color: '#444' }
+      },
+      y: {
+        ticks: { color: '#eee' },
+        grid: { color: '#444' }
+      }
+    },
+    plugins: {
+      legend: {
+        labels: { color: '#eee' }
+      }
     }
   }
 });
