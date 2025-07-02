@@ -8,6 +8,7 @@ const wiekChart = new Chart(wiekCtx, {
       label: 'Liczba respondentów',
       data: [20, 15, 10, 5, 0], // przykładowe dane
       backgroundColor: ['#4cff88', '#4cafff', '#ffb84c', '#ff7f50', '#444']
+      
     }]
   },
   options: {
@@ -36,7 +37,8 @@ const silnikChart = new Chart(ctx, {
     labels: ['Spalinowy', 'Hybrydowy', 'Elektryczny'],
     datasets: [{
       data: [30, 15, 5], // przykładowe dane
-      backgroundColor: ['#ff4c4c', '#4cafff', '#4cff88']
+      backgroundColor: ['#ff4c4c', '#4cafff', '#4cff88'],
+      offset: [40, 0, 0]
     }]
   },
   options: {
@@ -57,7 +59,8 @@ const gender = new Chart(gen, {
     labels: ['Kobieta', 'Mężczyzna', 'Inna'],
     datasets: [{
       data: [30, 15, 5], 
-      backgroundColor: ['#ff4c4c', '#4cafff', '#4cff88']
+      backgroundColor: ['#ff4c4c', '#4cafff', '#4cff88'],
+      offset: [40, 0, 0]
     }]
   },
   options: {
@@ -78,7 +81,8 @@ const przyszloscChart = new Chart(przyszloscCtx, {
     labels: ['Elektryczne', 'Hybrydowe', 'Wodorowe'],
     datasets: [{
       data: [10, 15, 25],
-      backgroundColor: ['#4cff88', '#4cafff', '#ff4c4c']
+      backgroundColor: ['#4cff88', '#4cafff', '#ff4c4c'],
+      offset: [0, 0, 40]
     }]
   },
   options: {
@@ -98,7 +102,8 @@ const miejsceChart = new Chart(miejsceCtx, {
     labels: ['Wieś', 'Małe miasto', 'Średnie miasto', 'Duże miasto'],
     datasets: [{
       data: [8, 10, 20, 12], // przykładowe dane, dostosuj jeśli masz dokładne
-      backgroundColor: ['#4cff88', '#ffb84c', '#4cafff', '#ff4c4c']
+      backgroundColor: ['#4cff88', '#ffb84c', '#4cafff', '#ff4c4c'],
+      offset: [0, 0, 40, 0]
     }]
   },
   options: {
