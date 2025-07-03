@@ -1,4 +1,5 @@
 
+    //WIEK RESPONDENTÓW//////////////////////////////////////////////////////////
     const wiekCtx = document.getElementById('wiekChart').getContext('2d');
 const wiekChart = new Chart(wiekCtx, {
   type: 'bar',
@@ -6,8 +7,8 @@ const wiekChart = new Chart(wiekCtx, {
     labels: ['18-25', '26-35', '36-45', '46-55', '56+'],
     datasets: [{
       label: 'Liczba respondentów',
-      data: [20, 15, 10, 5, 0], // przykładowe dane
-      backgroundColor: ['#4cff88', '#4cafff', '#ffb84c', '#ff7f50', '#444']
+      data: [24, 3, 2, 11, 2], 
+      backgroundColor: ['#4cff88', '#4cafff', '#ffb84c', '#ff7f50', ' #531f93 ']
       
     }]
   },
@@ -29,15 +30,15 @@ const wiekChart = new Chart(wiekCtx, {
   }
 });
 
-    
+    //Typ silnika wybierany przez respondentów//////////////////////////////
     const ctx = document.getElementById('silnikChart').getContext('2d');
 const silnikChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ['Spalinowy', 'Hybrydowy', 'Elektryczny'],
+    labels: ['Spalinowy', 'Hybrydowy', 'Elektryczny', 'Wodorowy'],
     datasets: [{
-      data: [30, 15, 5], // przykładowe dane
-      backgroundColor: ['#ff4c4c', '#4cafff', '#4cff88'],
+      data: [11, 14, 5, 20], 
+      backgroundColor: ['#ff4c4c', '#4cafff', '#4cff88', ' #531f93 '],
       offset: [40, 0, 0]
     }]
   },
@@ -58,7 +59,7 @@ const gender = new Chart(gen, {
   data: {
     labels: ['Kobieta', 'Mężczyzna', 'Inna'],
     datasets: [{
-      data: [30, 15, 5], 
+      data: [20, 30, 0], 
       backgroundColor: ['#ff4c4c', '#4cafff', '#4cff88'],
       offset: [40, 0, 0]
     }]
@@ -78,9 +79,9 @@ const przyszloscCtx = document.getElementById('przyszloscChart').getContext('2d'
 const przyszloscChart = new Chart(przyszloscCtx, {
   type: 'pie',
   data: {
-    labels: ['Elektryczne', 'Hybrydowe', 'Wodorowe'],
+    labels: ['Elektryczne', 'Hybrydowe', 'Spalinowe'],
     datasets: [{
-      data: [10, 15, 25],
+      data: [4, 0, 25],
       backgroundColor: ['#4cff88', '#4cafff', '#ff4c4c'],
       offset: [0, 0, 40]
     }]
@@ -101,7 +102,7 @@ const miejsceChart = new Chart(miejsceCtx, {
   data: {
     labels: ['Wieś', 'Małe miasto', 'Średnie miasto', 'Duże miasto'],
     datasets: [{
-      data: [8, 10, 20, 12], // przykładowe dane, dostosuj jeśli masz dokładne
+      data: [8, 6, 14, 22], // przykładowe dane, dostosuj jeśli masz dokładne
       backgroundColor: ['#4cff88', '#ffb84c', '#4cafff', '#ff4c4c'],
       offset: [0, 0, 40, 0]
     }]
@@ -122,7 +123,7 @@ const wyksztalcenieChart = new Chart(wyksztalcenieCtx, {
     labels: ['Podstawowe', 'Zawodowe', 'Średnie', 'Wyższe'],
     datasets: [{
       label: 'Liczba respondentów',
-      data: [5, 10, 20, 15], // przykładowe dane, dostosuj
+      data: [2, 0, 26, 22], 
       backgroundColor: ['#ff4c4c', '#ff7f50', '#4cafff', '#4cff88']
     }]
   },
@@ -148,12 +149,13 @@ const dochodCtx = document.getElementById('dochodChart').getContext('2d');
 const dochodChart = new Chart(dochodCtx, {
   type: 'bar',
   data: {
-    labels: ['< 2000 zł', '2000-4000 zł', '4000-6000 zł', '> 6000 zł'],
-    datasets: [{
-      label: 'Liczba respondentów',
-      data: [8, 15, 17, 10], // przykładowe dane, bogata rozkładówka :)
-      backgroundColor: ['#ff4c4c', '#ff7f50', '#4cafff', '#4cff88']
-    }]
+    labels: ['do 3700 zł', '3700-5000 zł', '5000-9000 zł', 'powyżej 9000 zł'],
+datasets: [{
+  label: 'Liczba respondentów',
+  data: [14, 13, 8, 15],
+  backgroundColor: ['#ff4c4c', '#ff7f50', '#4cafff', '#4cff88']
+}]
+
   },
   options: {
     indexAxis: 'y',
@@ -178,22 +180,27 @@ const dochodSilnikCtx = document.getElementById('dochodSilnikChart').getContext(
 const dochodSilnikChart = new Chart(dochodSilnikCtx, {
   type: 'bar',
   data: {
-    labels: ['< 2000 zł', '2000-4000 zł', '4000-6000 zł', '> 6000 zł'],
+    labels: ['do 3700 zł', '3700-5000 zł', '5000-9000 zł', 'powyżej 9000 zł'],
     datasets: [
       {
         label: 'Spalinowy',
-        data: [6, 10, 12, 5], // przykładowe dane
+        data: [4, 3, 2, 2],  // ← wpisz prawdziwe wartości jak podasz dane
         backgroundColor: '#ff4c4c'
       },
       {
         label: 'Hybrydowy',
-        data: [1, 3, 4, 3],
+        data: [5, 4, 2, 3],  // ← wpisz prawdziwe wartości
         backgroundColor: '#4cafff'
       },
       {
         label: 'Elektryczny',
-        data: [1, 2, 1, 2],
+        data: [2, 1, 1, 1],  // ← wpisz prawdziwe wartości
         backgroundColor: '#4cff88'
+      },
+      {
+        label: 'Wodorowy',
+        data: [3, 5, 3, 9],  // ← wpisz prawdziwe wartości
+        backgroundColor: '#ffaa4c'
       }
     ]
   },
@@ -218,30 +225,37 @@ const dochodSilnikChart = new Chart(dochodSilnikCtx, {
 });
 
 
+
 const wyksztalcenieTechnologiaCtx = document.getElementById('wyksztalcenieTechnologiaChart').getContext('2d');
 const wyksztalcenieTechnologiaChart = new Chart(wyksztalcenieTechnologiaCtx, {
   type: 'bar',
   data: {
-    labels: ['Podstawowe', 'Zawodowe', 'Średnie', 'Wyższe'],
+    labels: ['Źródła informacji'],
     datasets: [
       {
-        label: 'Elektryczne',
-        data: [1, 2, 5, 7], 
+        label: 'Opinie ekspertów',
+        data: [40],
         backgroundColor: '#4cff88'
       },
       {
-        label: 'Hybrydowe',
-        data: [2, 3, 6, 5],
+        label: 'Opinie znajomych',
+        data: [20],
         backgroundColor: '#4cafff'
       },
       {
-        label: 'Wodorowe',
-        data: [0, 1, 4, 6],
+        label: 'Internet',
+        data: [17],
+        backgroundColor: '#ffaa4c'
+      },
+      {
+        label: 'Reklamy',
+        data: [4],
         backgroundColor: '#ff4c4c'
       }
     ]
   },
   options: {
+    indexAxis: 'y',
     scales: {
       x: {
         ticks: { color: '#eee' },
